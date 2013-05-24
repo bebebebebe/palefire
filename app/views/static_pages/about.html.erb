@@ -1,17 +1,25 @@
-<h1>About Pale Fire</h1>
+<% provide(:title, 'About') %>
+<!DOCTYPE html>
+  <html><head>
+    <title>Pale Fire | <%= yield(:title) %></title>
 
-<p>Pale Fire is a writing tool that lets you write, revise, and rearrange small pieces of text.</p>
+  </head><body>
+    <h1>About Pale Fire</h1>
 
-<p>It's inspired by the writer Vladimir Nabokov: he did his writing on index cards in pencil, continually changing, replacing and expanding small texts on index cards until a novel resulted.</p>
+    <p>Pale Fire is a writing tool that lets you write, revise, and rearrange small pieces of text.</p>
 
-<p>That is, he created a version control system that was portable and encouraged modularity.</p>
+    <p>It's inspired by the writer Vladimir Nabokov: he did his writing on index cards in pencil, continually changing, replacing and expanding small texts on index cards until a novel resulted.</p>
 
-<p>One of his novels, <em>Pale Fire</em>, features a character who himself writes a strange long poem, also called 'Pale Fire,' in this way. The title is reference to Shakepeare's lines about inspiration and creativity:
-</p>
+    <p>That is, he created a version control system that was portable and encouraged modularity.</p>
 
-<p>
-  <em>
-    The moon's an arrant thief <br>
-    And her pale fire she snatches from the sun.
-  </em>  
-</p>
+    <p>One of his novels, <em>Pale Fire</em>, features a character who himself writes a strange long poem, also called 'Pale Fire,' in this way. The title is reference to Shakepeare's lines about inspiration and creativity:
+    </p>
+
+    <p>
+    <em>
+      The moon's an arrant thief <br>
+      And her pale fire she snatches from the sun.
+    </em>  
+    </p>
+  </body>
+</html>
