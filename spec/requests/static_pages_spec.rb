@@ -3,20 +3,18 @@ require 'spec_helper'
 describe "StaticPages" do
 
   describe "Home page" do
+    before { visit root_path }
 
     it "should have the h1 'Pale Fire'" do
-      visit '/static_pages/home'
       page.should have_selector('h1', :text => 'Pale Fire')
     end
 
     it "should have the base title" do
-      visit '/static_pages/home'
       page.should have_selector('title',
                           :text => "Pale Fire")
     end
 
     it "should not have a custom page title" do
-      visit '/static_pages/home'
       page.should_not have_selector('title',
                         :text => "| Home")
     end
@@ -26,12 +24,12 @@ describe "StaticPages" do
   describe "Help page" do
 
     it "should have the content 'Help'" do
-      visit '/static_pages/help'
+      visit help_path
       page.should have_selector('h1', :text => 'Help')
     end
 
     it "should have the title 'Help'" do
-      visit '/static_pages/help'
+      visit help_path
       page.should have_selector('title',
                         :text => "Pale Fire | Help")
     end
@@ -41,19 +39,30 @@ describe "StaticPages" do
   describe "About page" do
 
     it "should have the content 'About Pale Fire'" do
-      visit '/static_pages/about'
+      visit about_path
       page.should have_selector('h1', :text => 'About Pale Fire')
     end
 
     it "should have the title 'About'" do
-      visit '/static_pages/about'
+      visit about_path
       page.should have_selector('title',
                         :text => "Pale Fire | About")
     end
 
   end
 
+  describe "Contact page" do
 
+    it "should have the content 'Contact'" do
+      visit contact_path
+      page.should have_selector('h1', text: "Contact")
+    end
 
+    it "should have the title 'Contact'" do
+      visit contact_path
+      page.should have_selector('title',
+                        text: "Pale Fire | Contact")
+    end
+  end
 
 end
