@@ -8,9 +8,10 @@ Inspired by the writer Vladimir Nabokov: he did his writing on index cards in pe
 
 That is, he created a version control system that was portable and encouraged modularity.
 
-One of his novels, <em>Pale Fire</em>, features a character who himself writes a strange long poem, also called 'Pale Fire,' in this way. The title is reference to Shakepeare's lines about inspiration and creativity:
+One of his novels, [Pale Fire], features a character who himself writes a strange long poem, also called 'Pale Fire,' in this way. The title is reference to Shakepeare's lines about inspiration and creativity:
 
-  <em>
-    The moon's an arrant thief <br>
+  [
+    The moon's an arrant thief
+    
     And her pale fire she snatches from the sun.
-  </em>
+  ]
