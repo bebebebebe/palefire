@@ -9,6 +9,7 @@ html {
 body {
   padding-top: 60px;
   font-family: monospace;
+  background: rgba(179, 169, 169, 0.35);
 }
 
 section {
@@ -110,3 +111,45 @@ footer {
     }
   }
 }
+
+
+
+.hero-unit{
+  width: 5in;
+  height: 3in;
+  margin-top: 50px;
+  margin-left: 60px;
+
+#background-color: #fff; 
+background-image: 
+/* linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px), */
+linear-gradient(#ddd .1em, transparent .1em);
+background-size: 100% 1.5em;
+}
+
+/*  get rid of navbar black stripe
+
+.navbar-inner {
+  background: none !important; 
+  border: 0 !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
+
+.navbar-inverse .nav .active > a {
+  background: 0 !important; 
+  color: #333 !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
+
+.navbar-inverse .nav > li > a {
+  color: #333 !important;
+  text-shadow: none !important;
+}
+
+.navbar-inverse .nav > li > a:hover {
+  color: #333 !important;
+}
+
+*/
