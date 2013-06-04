@@ -5,6 +5,37 @@
   <title>Pale Fire | <%= yield(:title) %></title>
 </head>
 <body>
-<h1>try Pale Fire</h1>
+  <h1>try Pale Fire</h1>
+
+<div class="row">
+  <div class="span6 offset3 hero-unit" >
+
+
+   
+    <%= form_for(@user) do |f| %>
+
+      <%= f.label :name, "name:" %>
+      <%= f.text_field :name, autofocus: true %>
+
+      <%= f.label :email, "email:"  %>
+      <%= f.text_field :email %>
+      
+      <%= f.label :password, "choose a password:" %>
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation, "confirm password:" %>
+      <%= f.password_field :password_confirmation %>
+
+      <br><br>
+
+<div class="right">
+      <%= f.submit "create account", class: "btn btn-large btn-primary" %>
+</div>
+    <% end %>
+  </div>
+</div>
+
+
+
 </body>
 </html>
