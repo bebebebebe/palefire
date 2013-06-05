@@ -10,8 +10,6 @@ $grayMediumLight: #eaeaea;
   box-sizing: border-box;
 }
 
-
-
 /* universal */
 
 html {
@@ -43,6 +41,8 @@ textarea {
   text-align: right;
 
 }
+
+
 
 
 /* typography */
@@ -132,7 +132,6 @@ footer {
 }
 
 
-
 .hero-unit{
   width: 5in;
   height: 3in;
@@ -146,9 +145,9 @@ linear-gradient(rgba(171, 206, 212, 0.38) .1em, transparent .1em);
 background-size: 100% 1.5em;
 }
 
-
-
-
+.card-right {
+  margin-top: 0px;
+}
 
 
 /*  get rid of navbar black stripe
@@ -251,3 +250,14 @@ input[type=password] {
         border-color:white;
         box-shadow: 0px 0px 12px #fff; 
     }
+
+#error_explanation {
+  color: firebrick;
+  ul {
+    list-style: none;
+  }
+}
+
+.field_with_errors {
+  text-align: float-right;
+}

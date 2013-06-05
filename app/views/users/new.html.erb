@@ -8,11 +8,13 @@
   <h1>try Pale Fire</h1>
 
 <div class="row">
-  <div class="span6 offset3 hero-unit" >
+
+  
+  <div class="span6 offset3 hero-unit card-right" >
 
 
-   
     <%= form_for(@user) do |f| %>
+    
 
       <%= f.label :name, "name:" %>
       <%= f.text_field :name, autofocus: true %>
@@ -28,12 +30,20 @@
 
       <br><br>
 
-<div class="right">
-      <%= f.submit "create account", class: "btn btn-large btn-primary" %>
-</div>
+      <div class="right">
+        <%= f.submit "create account", class: "btn btn-large btn-primary" %>
+      </div>
+      
     <% end %>
+
+
   </div>
+    <div class="float-right">
+        <%= render 'shared/error_messages' %>
+    </div>
+    
 </div>
+
 
 
 
