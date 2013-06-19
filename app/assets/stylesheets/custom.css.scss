@@ -200,10 +200,7 @@ aside {
   }
 }
 
-.gravatar {
-  float: left;
-  margin-right: 10px;
-}
+
 
 
 /* miscellaneous */
@@ -259,3 +256,38 @@ input[type=password] {
 .field_with_errors {
   text-align: float-right;
 }
+
+
+/* projects */
+
+.projects {
+  list-style: none;
+  margin: 10px 0 0 0;
+
+  li {
+    padding: 30px 0;
+    border-top: 1px solid indianred;
+    }
+}
+
+.project_title {
+  display: block;
+}
+
+.timestamp {
+  color: $grayLight;
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+
+

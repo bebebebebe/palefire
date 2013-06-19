@@ -26,7 +26,7 @@ namespace :db do
 
     users = User.all(limit: 2)
     3.times do
-      title = Faker::Lorem.words(2)
+      title = Faker::Lorem.sentence(word_count=2)
       users.each { |user| user.projects.create!(title: title) }
     end
   end

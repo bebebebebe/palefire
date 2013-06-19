@@ -5,7 +5,7 @@ class Project < ActiveRecord::Base
 
   belongs_to :user
 
-  validates :title, presence: true, length: { maximum: 15 }
+  validates :title, presence: true, length: { maximum: 100 }
   validates :user_id, presence: true
 
   default_scope order: 'projects.created_at DESC'

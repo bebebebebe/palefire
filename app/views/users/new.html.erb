@@ -7,7 +7,10 @@
 <body>
   <h1>try Pale Fire</h1>
 
+
+
 <div class="row">
+
 
   
   <div class="span6 offset3 hero-unit card-right" >
@@ -28,7 +31,7 @@
       <%= f.label :password_confirmation, "confirm password:" %>
       <%= f.password_field :password_confirmation %>
 
-      <br><br>
+      <br>
 
       <div class="right">
         <%= f.submit "create account", class: "btn btn-large btn-primary" %>
@@ -36,6 +39,11 @@
       
     <% end %>
 
+<div class="right">
+  
+  or <%= link_to "sign in", signin_path %>
+
+</div>
 
   </div>
     <div class="float-right">
