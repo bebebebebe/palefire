@@ -3,7 +3,8 @@ class Project < ActiveRecord::Base
 
   validates :user_id, presence: true
 
-  belongs_to :user
+  belongs_to :user, dependent: :destroy
+  has_many :stacks
 
   validates :title, presence: true, length: { maximum: 100 }
   validates :user_id, presence: true

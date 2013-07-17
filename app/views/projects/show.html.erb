@@ -1,0 +1,16 @@
+<h1><%= @project.title %></h1>
+
+  <div class="span8">
+      <h3>top card of each stack</h3>
+      <ol class="listing">
+        <%= render partial: 'stack', collection: @project.stacks %>
+      </ol>    
+  </div>
+
+
+<%= render 'stacks/form' %>
+
+
+
+
+

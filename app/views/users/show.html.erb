@@ -9,16 +9,22 @@
     </h1>
       </div>
     </section>
+    <section>
+      <% if @user == current_user %>
+        <%= render 'projects/form' %>
+      <% end %> 
+    </section>
   </aside>
 
   <div class="span8">
     <% if @user.projects.any? %>
       <h3>projects</h3>
-      <ol class="projects">
+      <ol class="listing">
         <%= render @projects %>
       </ol>
-      
+      <%= will_paginate @projects %>
     <% end %>
   </div>
+
 
 </div>

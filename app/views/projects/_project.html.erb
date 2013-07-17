@@ -1,5 +1,5 @@
 <li>
-  <span class="project_title"><%= project.title %></span>
+  <span class="project_title"><%= link_to project.title, project_path(project) %></span>
   <span class="timestamp">
     started <%= time_ago_in_words(project.created_at) %> ago |
     <% if project.updated_at %>
