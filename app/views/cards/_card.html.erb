@@ -1,0 +1,5 @@
+<li>
+  <%= card.writing %>
+  <%= link_to 'revise card', edit_card_path(card) %> |
+  <%= link_to 'destroy card', card, method: :delete, data: { confirm: 'Are you sure?' } %>
+</li>

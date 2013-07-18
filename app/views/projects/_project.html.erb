@@ -1,9 +1,13 @@
 <li>
-  <span class="project_title"><%= link_to project.title, project_path(project) %></span>
+  <span class="project_title"><%= link_to project.title, project_path(project) %>
+    (stacks: <%= project.num_stacks %>)
+  </span>
   <span class="timestamp">
+    
     started <%= time_ago_in_words(project.created_at) %> ago |
-    <% if project.updated_at %>
-      last updated <%= time_ago_in_words(project.updated_at) %> ago
-    <% end %>
+    
+    last updated <%= time_ago_in_words(project.updated_at) %> ago |
+    
+
   </span>
 </li>

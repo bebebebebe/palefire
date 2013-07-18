@@ -1,1 +1,8 @@
-testing... from stacks show page
+<h1><%= @project.title %></h1>
+
+<div class="span8">
+    <h3>cards</h3>
+    <ol class="listing">
+      <%= render @cards %>
+    </ol>
+</div>

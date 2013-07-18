@@ -15,6 +15,9 @@ class StacksController < ApplicationController
 
   def show
     @stack = Stack.find(params[:id])
+    @project = Project.find(@stack.project_id)
+    @blank_card = @stack.cards.last
+    @cards = @stack.cards[0...@stack.cards.length-1]
   end
 
   def destroy
