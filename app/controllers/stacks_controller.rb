@@ -2,7 +2,7 @@ class StacksController < ApplicationController
 
   def new
     @project = Project.find(params[:id])
-    @stack = @project.stacks.build
+    @stack = @project.stacks.new
   end
 
   def create

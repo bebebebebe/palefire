@@ -17,7 +17,7 @@ class ProjectsController < ApplicationController
   def show
     @project = Project.find(params[:id])
     @stack = Stack.new
-    @stack.project_id = @project.id   
+    @user = User.find(@project.user_id)
   end
 
   def destroy
