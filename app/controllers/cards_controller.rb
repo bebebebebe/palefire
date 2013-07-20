@@ -2,8 +2,9 @@ class CardsController < ApplicationController
 
   def edit
     @card = Card.find(params[:id])
-    stack = Stack.find(@card.stack_id)
-    @project = Project.find(stack.project_id)
+    @current_stack = Stack.find(@card.stack_id)
+    @project = Project.find(@current_stack.project_id)
+    @stack = Stack.new
   end
 
   def update

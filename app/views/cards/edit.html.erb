@@ -1,3 +1,10 @@
 <h1><%= @project.title %></h1>
 
+<%= link_to '<< stack of cards', stack_path(@current_stack) %>
+
 <%= render 'form' %>
+
+<% if @current_stack == @project.stacks.last %>
+  This is the last stack of the project.
+  <%= render 'stacks/form' %>
+<% end %>

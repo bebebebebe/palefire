@@ -1,4 +1,9 @@
 <li>
   <%= stack.cards.first.writing %>
-  <%= link_to 'see cards in stack', stack_path(stack) %>
+  <%= link_to 'revise...', edit_card_path(stack.cards.first)  %> |
+  <% if stack.multi? %>
+    <%= link_to 'see different versions', stack_path(stack) %>
+    (<%= stack.cards.count - 1 %>) |
+  <% end %>
+  <%= link_to 'destroy stack', stack, method: :delete, data: { confirm: 'Are you certain?' } %>
 </li>

@@ -21,6 +21,10 @@ class StacksController < ApplicationController
   end
 
   def destroy
+    @stack = Stack.find(params[:id])
+    project = Project.find(@stack.project_id)
+    @stack.destroy
+    redirect_to project_path(project)
   end
 
 end

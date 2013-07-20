@@ -1,8 +1,23 @@
 <h1><%= @project.title %></h1>
 
 <div class="span8">
-    <h3>cards</h3>
-    <ol class="listing">
-      <%= render @cards %>
-    </ol>
+  <h3>versions:</h3>
+  <ol class="listing">
+    <%= render @cards %>
+  </ol>
 </div>
+
+<div>
+  
+  <%= link_to 'blank card', edit_card_path(@blank_card) %>
+<br/>
+  <%= link_to '<< project', project_path(@project) %>
+</div>
+
+<% if @stack == @project.stacks.last %>
+  (this is the last stack of the project)
+<% end %>
+
+
+
+
