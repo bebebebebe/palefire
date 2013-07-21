@@ -1,10 +1,17 @@
 <h1><%= @project.title %></h1>
 
-<%= link_to '<< stack of cards', stack_path(@current_stack) %>
+<div class="row">
 
-<%= render 'form' %>
+<aside class="span4">
+  <%= link_to '<< stack of cards', stack_path(@current_stack) %><br/>
+  <% if @current_stack == @project.stacks.last %>
+    This is the last stack of the project.
+    <%= render 'stacks/form' %>
+  <% end %>
+</aside>
 
-<% if @current_stack == @project.stacks.last %>
-  This is the last stack of the project.
-  <%= render 'stacks/form' %>
-<% end %>
+<div class="span8">
+ <%= render 'form' %>
+<div class="span8"> 
+
+</div>
