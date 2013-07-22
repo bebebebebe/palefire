@@ -1,8 +1,8 @@
 class Stack < ActiveRecord::Base
   attr_accessible :project_id
 
-  belongs_to :project, dependent: :destroy
-  has_many :cards
+  belongs_to :project
+  has_many :cards, dependent: :destroy
 
   def multi?
     cards.size > 2

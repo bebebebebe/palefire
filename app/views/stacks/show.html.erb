@@ -1,4 +1,4 @@
-<h1><%= @project.title %></h1>
+<h1><%= link_to @project.title, project_path(@project) %></h1>
 
 <div class="span8">
   <h3>versions:</h3>
@@ -10,8 +10,7 @@
 <div>
   
   <%= link_to 'blank card', edit_card_path(@blank_card) %>
-<br/>
-  <%= link_to '<< project', project_path(@project) %>
+
 </div>
 
 <% if @stack == @project.stacks.last %>

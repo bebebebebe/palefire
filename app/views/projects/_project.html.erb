@@ -8,6 +8,6 @@
     
     last updated <%= time_ago_in_words(project.cards.first.updated_at) %> ago |
     
-
+    <%= link_to 'destroy project', project, method: :delete, data: { confirm: 'This will destroy all cards and all stacks in the project.' } %>
   </span>
 </li>

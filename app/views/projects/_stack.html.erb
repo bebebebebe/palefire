@@ -5,5 +5,5 @@
     <%= link_to 'see versions', stack_path(stack) %>
     (<%= stack.cards.count - 1 %>) |
   <% end %>
-  <%= link_to 'destroy stack', stack, method: :delete, data: { confirm: 'Are you certain?' } %>
+  <%= link_to 'destroy stack', stack, method: :delete, data: { confirm: 'This will destroy all cards in the stack.' } %>
 </li>

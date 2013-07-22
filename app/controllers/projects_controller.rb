@@ -21,6 +21,11 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
+    @project = Project.find(params[:id])
+    @project.destroy
+    flasn[:success] = "project deleted"
+    redirect_to current_user
   end
+
 
 end
