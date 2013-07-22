@@ -1,4 +1,10 @@
 <li>
+
+
+    <%= radio_button_tag 'select', card, value: @top_card %>
+ 
+  
+
   <%= card.writing %>
   <%= link_to 'revise', edit_card_path(card) %> |
   <%= link_to 'destroy version', card, method: :delete, data: { confirm: 'Are you sure?' } %>

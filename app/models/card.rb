@@ -4,4 +4,5 @@ class Card < ActiveRecord::Base
   belongs_to :stack, dependent: :destroy
 
   default_scope order: 'cards.created_at DESC'
+
 end

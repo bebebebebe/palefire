@@ -1,5 +1,12 @@
 <h1><%= @project.title %></h1>
 
+<% if @top_card %>
+  <p>selected card: 
+  <%= @top_card.writing %>
+  </p><br/>
+<% end %>
+
+
 <div class="span8">
   <h3>versions:</h3>
   <ol class="listing">
