@@ -1,17 +1,36 @@
+<div class="links">
+
 <h1><%= link_to @project.title, project_path(@project) %></h1>
 
 <div class="row">
 
-<aside class="span4">
-  <%= link_to '<< stack of cards', stack_path(@current_stack) %><br/>
+<% unless @current_stack == @project.stacks.first %>
+  <div class="span5">
+   
+    <%= render 'prev_card' %> 
+  </div>
+<% end %>
+
+  <div class="span5 offset2">
+
+   <%= render 'form' %>
+   <%= link_to 'see versions', stack_path(@current_stack) %>
+  </div>
+
+
+</div>
+
+<div class="row">
+
+<div class="span5 offset7">
   <% if @current_stack == @project.stacks.last %>
     This is the last stack of the project.
     <%= render 'stacks/form' %>
+  <% else %>
+    
+    <%= link_to 'next stack >>', edit_card_path(@next_card) %>
   <% end %>
-</aside>
 
-<div class="span8">
- <%= render 'form' %>
-<div class="span8"> 
-
+  
+</div>
 </div>

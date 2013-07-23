@@ -12,19 +12,21 @@
     </div>
   <% end %>
 
+
+
     
-     <%= f.label :writing, 'revise card:' %>
-   <div class="hero-unit writing">
-   
-    <%= f.text_area :writing, class: "card-area", autofocus: true %>
+      <%= f.label :writing, 'current stack:' %>
+
+      <div>
+        <%= f.text_area :writing, class: "card writing", autofocus: true %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "keep version" %>
+      </div>
 
 
-  
-  <div class="actions">
-    <%= f.submit "keep version" %>
-  </div>
 
-   </div>
 
 <% end %>
 

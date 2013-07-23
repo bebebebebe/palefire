@@ -5,22 +5,29 @@
 </head>
 <body>
 
-  <div class="center hero-unit">
 
+
+  <div class="card center", id="home" >
     <h1>Pale Fire</h1>
+  
 
-    <h4>write, revise, rearrange</h4> <h4>tiny texts | small stories</h4>
-    <br>
+    <h5>write, revise, rearrange</h5>
+    
+
+    <br></br>
 
 
 <% if signed_in? %>
-  <%= link_to "start writing", current_user, class: "btn btn-large btn-primary" %>
+  <%= link_to "start writing", current_user, class: "btn btn-primary btn-large " %>
 <% else %>
     <%= link_to "start writing", try_path, class: "btn btn-large btn-primary" %>
 <% end %>
 
   </div> 
 
+
+
+</div>
 
 </body>
 

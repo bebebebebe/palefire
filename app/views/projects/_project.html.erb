@@ -1,13 +1,31 @@
 <li>
-  <span class="project_title"><%= link_to project.title, project_path(project) %>
-    (stacks: <%= project.num_stacks %>)
-  </span>
-  <span class="timestamp">
-    
-    started <%= time_ago_in_words(project.created_at) %> ago |
-    
-    last updated <%= time_ago_in_words(project.cards.first.updated_at) %> ago |
-    
-    <%= link_to 'destroy project', project, method: :delete, data: { confirm: 'This will destroy all cards and all stacks in the project.' } %>
-  </span>
+
+
+  <div class="card project-card center">
+
+    <br><br>
+
+    <%= link_to content_tag(:span, project.title), project_path(project), class: "project-title" %>
+
+    <div class="timestamp">
+      (stacks: <%= project.num_stacks %>) </br>
+      
+      started <%= time_ago_in_words(project.created_at) %> ago |
+      
+      last updated <%= time_ago_in_words(project.cards.first.updated_at) %> ago </br>
+    </div>
+
+</div>
+
+<div class="links project-info">
+    <%= link_to 'delete project', project,  method: :delete, data: { confirm: 'This will destroy all cards and all stacks in the project.' } %>
+  </div>
+
+
 </li>
+
+
+
+
+
+

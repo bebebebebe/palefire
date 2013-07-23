@@ -1,5 +1,5 @@
 <li>
-  <%= stack.cards.first.writing %>
+  <%= simple_format(stack.cards.first.writing) %>
   <%= link_to 'revise...', edit_card_path(stack.cards.first)  %> |
   <% if stack.multi? %>
     <%= link_to 'see versions', stack_path(stack) %>
