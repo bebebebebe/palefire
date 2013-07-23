@@ -147,6 +147,13 @@ h2 {
   border-radius: 5px;
 }
 
+.signup{
+  @include small_card;
+  position:fixed;
+  top: 180px;
+  left: 150px;
+}
+
 .writing {  
   @include small_card;
   line-height: 1.5;

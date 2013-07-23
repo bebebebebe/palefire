@@ -13,7 +13,7 @@
 
 
   
-  <div class="card" >
+  <div class="card signup" >
 
 
     <%= form_for(@user) do |f| %>
@@ -33,13 +33,13 @@
 
       <br>
 
-      <div class="right">
+      <div style="float: right">
         <%= f.submit "create account", class: "btn btn-large btn-primary" %>
       </div>
       
     <% end %>
-
-<div class="right">
+<br>
+<div style="float: right">
   
   or <%= link_to "sign in", signin_path %>
 
