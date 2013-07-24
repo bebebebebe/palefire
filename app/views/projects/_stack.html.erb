@@ -1,5 +1,7 @@
 <li>
+  <div style="font-family: helvetica">
   <%= simple_format(stack.cards.first.writing) %>
+</div>
   <%= link_to 'revise...', edit_card_path(stack.cards.first)  %> |
   <% if stack.multi? %>
     <%= link_to 'see versions', stack_path(stack) %>

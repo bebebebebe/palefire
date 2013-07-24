@@ -2,14 +2,14 @@
 
 <div class="links">
 
-  <div class="span8">
+  <div class="span7">
     <h3>top card of each stack</h3>
     <ol class="listing">
       <%= render partial: 'stack', collection: @project.stacks %>
     </ol>    
   </div>
 
-  <div>
+  <div class="span3 offset1">
     <%= render 'stacks/form' %>
     <%= link_to '<< projects', user_path(@user) %>
   </div>
