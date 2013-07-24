@@ -5,7 +5,11 @@
 
     <br><br>
 
-    <%= link_to content_tag(:span, project.title), project_path(project), class: "project-title" %>
+    <%= link_to content_tag(:span), project_path(project) %>
+    
+    <div class="project-title">
+      <%= project.title %>
+    </div>
 
     <div class="timestamp">
       (stacks: <%= project.num_stacks %>) </br>
@@ -15,9 +19,9 @@
       last updated <%= time_ago_in_words(project.cards.first.updated_at) %> ago </br>
     </div>
 
-</div>
+  </div>
 
-<div class="links project-info">
+  <div class="links project-info">
     <%= link_to 'delete project', project,  method: :delete, data: { confirm: 'This will destroy all cards and all stacks in the project.' } %>
   </div>
 

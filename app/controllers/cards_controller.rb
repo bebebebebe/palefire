@@ -5,6 +5,7 @@ class CardsController < ApplicationController
     @current_stack = Stack.find(@card.stack_id)
     @project = Project.find(@current_stack.project_id)
     @stack = Stack.new
+    
     prev_stack = @current_stack.prev
     if prev_stack
       @prev_card = prev_stack.cards.first
