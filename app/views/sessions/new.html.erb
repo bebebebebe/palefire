@@ -1,22 +1,27 @@
 <% provide(:title, "sign in") %>
 <h1>sign in</h1>
 
-<div class="row">
-  <div class="span6 offset3">
+<div class="card signup" style="padding:20px">
+  
      <%= form_for(:session, url: sessions_path) do |f| %>
 
       <%= f.label :email, "email:" %>
-      <%= f.text_field :email %>
+      <%= f.text_field :email , autofocus: true %>
 
       <%= f.label :password, "password:" %>
       <%= f.password_field :password %>
 
-      <br>
+      <br><br><br><br><br><br>
 
-      <%= f.submit "sign in", class: "btn btn-large btn-primary" %>
+      <div style="float:right">
+      <%= f.submit "sign in", class: "btn btn-large btn-primary"%></div>
+      <br/>
+      
     <% end %>
 
-    <p>Don't have an account yet? <%= link_to "try Pale Fire", try_path %></p>
+   <div style="float:right">
+      Don't have an account yet? <%= link_to "try Pale Fire", try_path %>
+      </div>
 
-  </div>
+  
 </div>

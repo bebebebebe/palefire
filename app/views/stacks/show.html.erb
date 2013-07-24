@@ -18,14 +18,11 @@
 
 <div>
   
-  <%= link_to 'blank card', edit_card_path(@blank_card) %>
+  <%= link_to 'add blank card to stack', edit_card_path(@blank_card) %>
 
-</div>
-
-<% if @stack == @project.stacks.last %>
-  (this is the last stack of the project)
-<% end %>
-
-
+</div class="span2 offset2">
+  <% if @stack == @project.stacks.last %>
+    <%= render 'form' %>
+  <% end %>
 </div>
 

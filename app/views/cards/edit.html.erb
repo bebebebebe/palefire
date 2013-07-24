@@ -2,36 +2,31 @@
 
 <h1><%= link_to @project.title, project_path(@project) %></h1>
 
-<div class="row">
+<div>
+  <% if @current_stack == @project.stacks.last %>
+    <div style="float:right; margin-top: -50px;">
+      <%= render 'stacks/form' %>
+    </div>
+  <% else %>
+    <%= link_to '>>', edit_card_path(@next_card), style:"float: right" %>
+  <% end %>
+  <% unless @current_stack == @project.stacks.first %>
+    <%=  link_to '<<', edit_card_path(@prev_card), style:"float: left" %>
+  <% end %>
+</div>
 
-<% unless @current_stack == @project.stacks.first %>
-  <div class="span6", style="margin-top: 5px">
-   
-    <%= render 'prev_card' %> 
-  </div>
-<% end %>
+<div class="row", style="clear: both">
+
+<div class="span6", style="margin-top: 5px">
+  <% unless @current_stack == @project.stacks.first %>
+  <%= render 'prev_card' %> 
+  <% end %>
+</div>
+
 
   <div class="span5", style="margin-left: 50px">
-
    <%= render 'form' %>
- (<%= link_to 'see versions', stack_path(@current_stack) %>)
- 
   </div>
 
 
-</div>
-
-<div class="row">
-
-<div class="span5 offset7">
-  <% if @current_stack == @project.stacks.last %>
-    
-    <%= render 'stacks/form' %>
-  <% else %>
-    
-    <%= link_to 'next stack >>', edit_card_path(@next_card), style:"float: right" %>
-  <% end %>
-
-  
-</div>
 </div>

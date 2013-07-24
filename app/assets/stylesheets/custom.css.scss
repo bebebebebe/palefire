@@ -170,14 +170,7 @@ h2 {
   font-size: 16px;
   font-weight: bolder;
   }
-}
-
-.new-project {
-  font-size: 28px;
-  @include mini_card;
-}
-
-.project-card span {
+  span {
   padding-top: 30px;
   width:100%;
   height:100%;
@@ -186,6 +179,14 @@ h2 {
   top:0px;
   left:0px;
 }
+}
+
+.new-project {
+  font-size: 28px;
+  @include mini_card;
+}
+
+
 
 .project-info {
   float: right;
@@ -315,4 +316,3 @@ aside {
 }
 
 
-.project_hover { background-color: #380606; }
