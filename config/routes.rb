@@ -2,7 +2,7 @@ Palefire::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
 
-  resources :projects, only: [:create, :destroy, :show] do
+  resources :projects do
     resources :stacks
   end
 
