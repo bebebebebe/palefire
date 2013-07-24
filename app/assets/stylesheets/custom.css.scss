@@ -162,7 +162,7 @@ h2 {
 }
 
 .project-card {
-  padding: 25px;
+  padding: 5px;
   @include tiny_card;
   position: relative;
   project-title {
@@ -193,12 +193,6 @@ h2 {
 }
 
 
-.shadow {
-  background-color: lighten($grayMediumLight, 6%);
-  background-image: 
-    linear-gradient(rgba(171, 206, 212, 0.38) .1em, transparent .1em);
-    background-size: 100% 1.5em;
-}
 
 #home{
   text-align: center;
@@ -209,6 +203,50 @@ h2 {
   @include large_card;
   border: outset;
 }
+
+/* whole text view */
+
+.whole-text {
+  padding-top: 100px;
+  width: 60%;
+  padding-left: 14%;
+  padding-right: 16%;
+  font-family: Helvetica, Times, 'Times New Roman', serif;
+  color: #737373;
+  background: white;
+  word-height: 1.5;
+  font-size: 14px;
+}
+
+.whole-text-title {
+    font-family: Helvetica, Times, 'Times New Roman', serif;
+    font-size: 28px;
+    color: black;
+    text-decoration: none; 
+  }
+
+.whole-text-description {
+    color: #999999;
+    font-style: italic;
+    text-indent: 10px;
+    
+    }
+
+.card_text {
+  position: relative;
+}
+
+ .card_text span {
+width:100%;
+height:100%;
+position:absolute;
+z-index:2;
+top:0px;
+left:0px;
+ }
+
+
+
 
 
 /* sidebar */

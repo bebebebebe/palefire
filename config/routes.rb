@@ -2,7 +2,7 @@ Palefire::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
 
-  resources :projects, only: [:create, :destroy, :show] do
+  resources :projects do
     resources :stacks
   end
 
@@ -19,6 +19,8 @@ Palefire::Application.routes.draw do
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
+
+
 
 
 

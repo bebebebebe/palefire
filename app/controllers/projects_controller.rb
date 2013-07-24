@@ -20,6 +20,10 @@ class ProjectsController < ApplicationController
     @user = User.find(@project.user_id)
   end
 
+  def edit
+    @project = Project.find(params[:id])
+  end
+
   def destroy
     @project = Project.find(params[:id])
     @project.stacks.each {|s| s.destroy}
@@ -28,6 +32,7 @@ class ProjectsController < ApplicationController
     flash[:success] = "project deleted"
     redirect_to current_user
   end
+
 
 
 end

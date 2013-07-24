@@ -1,0 +1,10 @@
+
+<div class="whole-text">
+
+  <div class="whole-text-title"><%= @project.title %></div>
+
+  <div class="whole-text-description">sample description</div><br/>
+
+  <%= render partial: 'card_text', collection: @project.stacks %>
+
+</div>
