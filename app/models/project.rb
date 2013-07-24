@@ -1,5 +1,5 @@
 class Project < ActiveRecord::Base
-  attr_accessible :title
+  attr_accessible :title, :description_short, :description_long
 
   validates :user_id, presence: true
 

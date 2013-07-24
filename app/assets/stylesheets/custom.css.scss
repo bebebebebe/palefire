@@ -19,6 +19,7 @@ $emph_text: indianred;
 
 html {
   overflow-y: scroll;
+ 
 }
 
 body {
@@ -207,7 +208,10 @@ h2 {
 /* whole text view */
 
 .whole-text {
+
   padding-top: 100px;
+  padding-bottom: 150px;
+  
   width: 60%;
   padding-left: 14%;
   padding-right: 16%;
@@ -217,6 +221,7 @@ h2 {
   word-height: 1.5;
   font-size: 14px;
 }
+
 
 .whole-text-title {
     font-family: Helvetica, Times, 'Times New Roman', serif;

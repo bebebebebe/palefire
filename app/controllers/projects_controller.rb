@@ -24,6 +24,14 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
   end
 
+  def update
+    @project = Project.find(params[:id])
+    @project.update_attributes(params[:project])
+    flash.notice = "article \"#{@project.title}\" successfully updated."
+    redirect_to project_path(@project)
+  end
+
+
   def destroy
     @project = Project.find(params[:id])
     @project.stacks.each {|s| s.destroy}

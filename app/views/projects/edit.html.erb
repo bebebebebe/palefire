@@ -2,3 +2,28 @@
 
 <h1>update project profile</h1>
 
+
+<div class="card signup" style="padding:20px">
+    <%= form_for(@project) do |f| %>
+      <%= f.label :title, "title:" %>
+      <%= f.text_field :title %>
+
+      <%= f.label :description_short, "short description (byline):" %>
+      <%= f.text_field :description_short, autofocus: true %>
+
+      <%= f.label :description_long, "about the project:" %>
+      <%= f.text_field :description_long %>
+
+<br><br><br>
+    
+      <%= f.submit "save changes" %> 
+
+
+</div>
+
+     
+
+    <% end %>
+
+
+
