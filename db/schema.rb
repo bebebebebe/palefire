@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130724210517) do
+ActiveRecord::Schema.define(:version => 20130725152930) do
 
   create_table "cards", :force => true do |t|
     t.text     "writing"
@@ -23,9 +23,9 @@ ActiveRecord::Schema.define(:version => 20130724210517) do
   create_table "projects", :force => true do |t|
     t.string   "title"
     t.integer  "user_id"
-    t.datetime "created_at",                                                              :null => false
-    t.datetime "updated_at",                                                              :null => false
-    t.string   "description_short", :default => "...click here to edit/remove byline..."
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.string   "description_short"
     t.text     "description_long"
   end
 
