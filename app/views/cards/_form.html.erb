@@ -19,18 +19,19 @@
       </div>
 
       <div class="actions">
-        <%= f.submit "keep version" %>
+        <%= f.submit "keep version", class: "keep-btn" %>
+
+        <span id="update_msg"></span>
+
         <% if @current_stack.multi? %>
           <div style:"float:right">
             <%= link_to 'see versions', stack_path(@current_stack) %>
             (<%= @current_stack.cards.count - 1 %>)
-            <span id="update_msg"></span>
+            
           </div>
         <% end %>
+
       </div>
-
-
-
 
 <% end %>
 
