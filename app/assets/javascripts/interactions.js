@@ -6,4 +6,11 @@ $(document).ready(function(){
   },function(){
     $(this).css("border","");
   });
+
+  $(".keep-btn").hover(function(){
+    $(this).css("background", "firebrick");
+  }, function(){
+    $(this).css("background","");
+  });
+
 });
