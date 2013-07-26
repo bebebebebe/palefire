@@ -1,7 +1,8 @@
 
-<div class="card_text">
+<div class="card_text", style="float: left; word-wrap: break-word;">
   <%= link_to content_tag(:span), edit_card_path(card_text.cards.first) %>
-  <%= simple_format(card_text.cards.first.writing) %>
+  <%= simple_format(card_text.cards.first.writing + '&nbsp') %>
+
 </div>
 
 
