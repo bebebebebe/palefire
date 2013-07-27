@@ -3,13 +3,12 @@
 $(document).ready ->
   $(".edit_card").on("ajax:success", (e, data, status, xhr) ->
     $("#update_msg").append('<div class="msg">version saved</div>');
-    $(".current_card").css("background", "#D6D4D5").css("border", "solid gray 5px");
+    $(".keep-btn").css("background", "");
+    $(".current_card").css("background", "#BFBABA");
     setTimeout ( ->
-      $(".current_card").css("border", "").css("background", "")
-      ), 1500;
-    $(".msg").delay(1500).fadeOut(1000);
+      $(".current_card").css("background", "").css("transition", "background 1s")
+      ), 1000;
+    $(".msg").delay(1000).fadeOut("slow");
   ).bind "ajax:error", (e, xhr, status, error) ->
-    $("#update_msg").append "<p>ERROR</p>"
-
-
-# css("border", "solid black 2px").
+    $("#update_msg").append('<div class="msg">blank card: not saved</div>');
+    $(".msg").delay(2000).fadeOut("slow");

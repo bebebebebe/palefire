@@ -15,13 +15,15 @@
     
       <%= f.label :writing, 'write & revise:' %> 
       <div>
-        <%= f.text_area :writing, class: "card writing current_card", autofocus: true %>
+        <%= f.text_area :writing, class: "card writing current_card", style: "box-shadow:         3px 3px 5px 6px #ccc;", autofocus: true %>
+        <span id="update_msg"></span>
+
       </div>
 
       <div class="actions">
         <%= f.submit "keep version", class: "keep-btn" %>
 
-        <span id="update_msg"></span>
+        
 
         <% if @current_stack.multi? %>
           <div style:"float:right">

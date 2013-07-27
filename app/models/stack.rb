@@ -17,4 +17,12 @@ class Stack < ActiveRecord::Base
     project.stacks.where("id < ?", id).order("id DESC").first
   end
 
+  def format_top_card
+    text = cards.first.writing
+    text.gsub('/n', '<p></p>')
+    text += '&nbsp' if text != ''
+    
+  end
+
+
 end
