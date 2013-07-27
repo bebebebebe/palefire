@@ -10,5 +10,5 @@ $(document).ready ->
       ), 1000;
     $(".msg").delay(1000).fadeOut("slow");
   ).bind "ajax:error", (e, xhr, status, error) ->
-    $("#update_msg").append('<div class="msg">blank card: not saved</div>');
+    $("#update_msg").append('<div class="msg">Error: not saved</div>');
     $(".msg").delay(2000).fadeOut("slow");

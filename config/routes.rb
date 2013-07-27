@@ -6,7 +6,6 @@ Palefire::Application.routes.draw do
     resources :stacks
   end
 
-
   resources :stacks
   resources :cards
 
