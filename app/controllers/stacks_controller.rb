@@ -9,7 +9,9 @@ class StacksController < ApplicationController
     @stack = Stack.new(params[:stack])
     @stack.project_id = params[:project_id]
     @stack.save
-    @card = @stack.cards.create
+    @card = @stack.cards.new
+    @card.pick = true
+    @card.save
     redirect_to edit_card_path(@card)
   end
 

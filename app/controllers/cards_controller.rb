@@ -17,13 +17,17 @@ class CardsController < ApplicationController
   end
 
   def update
-
     @card = Card.find(params[:id])
     @stack = Stack.find_by_id(@card.stack_id)
 
     @next_card = Card.new(params[:card])
     @next_card.stack_id = @card.stack_id
-    @next_card.save
+    @next_card.pick = true
+    
+    if @next_card.save
+      @card.pick = false
+      @card.save
+    end
 
     redirect_to edit_card_path(@next_card)
   end

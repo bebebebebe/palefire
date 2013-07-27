@@ -1,5 +1,4 @@
 
-
 $(document).ready ->
   $(".edit_card").on("ajax:success", (e, data, status, xhr) ->
     $("#update_msg").append('<div class="msg">version saved</div>');
