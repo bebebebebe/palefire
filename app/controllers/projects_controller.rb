@@ -5,9 +5,8 @@ class ProjectsController < ApplicationController
     @project = current_user.projects.build(params[:project])
     if @project.save
       @stack = @project.stacks.create
-      @card = @stack.cards.new
-      @card.writing = "new writing project! start editing..."
-      @card.save
+      @card = @stack.cards.create
+      
 
       flash[:success] = "new writing project started!"
       redirect_to edit_card_path(@card)
