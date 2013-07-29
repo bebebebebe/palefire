@@ -1,7 +1,7 @@
 
 $(document).ready ->
   $(".edit_card").on("ajax:success", (e, data, status, xhr) ->
-    $("#update_msg").append('<div class="msg">version saved</div>');
+    $("#update_msg").append('<div class="msg"></div>');
     $(".keep-btn").css("background", "");
     $(".current_card").css("background", "#BFBABA");
     setTimeout ( ->

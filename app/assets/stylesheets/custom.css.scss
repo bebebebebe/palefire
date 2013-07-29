@@ -35,7 +35,7 @@ html {
 body {
   padding-top: 60px;
   font-family: monospace;
-  background: white; /*#BFBABA;*/
+  background: white;
 }
 
 
@@ -123,6 +123,11 @@ h2 {
 
 /*  button */
 
+.keep-btn {
+  background: lighten($grayRed, 22%);
+}
+
+
 .btn-primary{
   background: indianred;
   &:hover{
@@ -158,16 +163,14 @@ h2 {
 
 .card{
   @include box_sizing;
-  @include shadow;
+  
   padding: 10px;
   border-radius: 5px;
   background: lighten($grayRed, 22%);
-  //border-style: groove;
+  border: solid #BFBABA 5px;
 }
 
-.current_card{
-  @include shadow;
-}
+
 
 
 .signup{
@@ -193,6 +196,19 @@ h2 {
   font-size: 16px;
   font-weight: bolder;
   }
+  span {
+  padding-top: 30px;
+  width:100%;
+  height:100%;
+  position:absolute;
+  z-index:2;
+  top:0px;
+  left:0px;
+}
+}
+
+.version {
+  position: relative
   span {
   padding-top: 30px;
   width:100%;
@@ -321,7 +337,8 @@ input, textarea, select, .uneditable-input {
   padding: 10px;
   margin-bottom: 15px;
   @include box_sizing;
-}
+
+  }
 
 
 textarea, textarea:focus, input[type=text], input[type=text]:focus, 
@@ -329,6 +346,8 @@ input[type=password], input[type=password]:focus {
   /* height: auto !important; */
   border: none;
   box-shadow: none;
+  
+
 }
 
 /* error messages */
@@ -398,7 +417,8 @@ aside {
 }
 
 .pick {
-  background: gray;
+  background: white;
+  border-style: solid firebrick 2px;
 }
 
 

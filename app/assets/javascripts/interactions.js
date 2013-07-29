@@ -8,10 +8,14 @@ $(document).ready(function(){
   });
 
   $(".keep-btn").hover(function(){
-    $(this).css("background", "firebrick");
+    $(this).css("background", "#BFBABA");
   }, function(){
     $(this).css("background","");
   });
+
+  //$(".version").click(function(){
+  //  $(this).css("background", "gray")
+  //});
 
 
 });

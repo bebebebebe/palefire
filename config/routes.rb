@@ -19,6 +19,9 @@ Palefire::Application.routes.draw do
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
 
+  get 'cards/choose'
+  post 'cards/choose'
+
 
 
 

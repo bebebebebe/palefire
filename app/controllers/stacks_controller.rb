@@ -31,4 +31,6 @@ class StacksController < ApplicationController
     redirect_to project_path(project)
   end
 
+  
+
 end

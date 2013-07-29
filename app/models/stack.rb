@@ -19,9 +19,10 @@ class Stack < ActiveRecord::Base
 
   def format_top_card
     text = cards.first.writing
-    text.gsub('/n', '<p></p>')
-    text += '&nbsp' if text != ''
-    
+    if text && text != ''
+      text.gsub('/n', '<p></p>')
+      text += '&nbsp'
+    end
   end
 
 
