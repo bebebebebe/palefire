@@ -8,8 +8,8 @@ class ProjectsController < ApplicationController
       @card = @stack.cards.create
       
 
-      flash[:success] = "new writing project started!"
-      redirect_to edit_card_path(@card)
+      #flash[:success] = "new writing project started!"
+      redirect_to edit_stack_path(@stack)
     else
       render 'static_pages/home'
     end

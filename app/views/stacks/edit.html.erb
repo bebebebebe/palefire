@@ -1,0 +1,57 @@
+
+<div class="links", style="margin-left: -20">
+
+<h1><%= link_to @project.title, project_path(@project) %></h1>
+
+<p>number of stacks in project: <%= @project.stacks.count %></p>
+
+<div>
+  <% if @stack.next %>
+    <%= link_to '>>', edit_project_stack_path(id: @stack.next.id,
+                                              project_id: @project.id), 
+                                              style: "float: right" %>
+  <% else %>
+      <div style="float:right; margin-top: -50px;">
+        <%= render 'form' %>
+      </div>
+  <% end %>
+
+  <% if @stack.prev %>
+    <%=  link_to '<<', edit_project_stack_path(id: @stack.prev.id,
+                                                project_id: @project.id),
+                                                style: "float: left" %>
+  <% end %>
+</div>
+
+
+<div class="row", style="clear: both">
+
+  <div class="span6", style="margin-top: 5px">
+    <% unless @stack == @project.stacks.first %>
+    <%= render 'prev' %> 
+    <% end %>
+  </div>
+
+  <div class="span5", style="margin-left: 50px">
+
+   <%= render partial: 'cards/form', object: @card %>
+
+   <% if @stack.multi? %>
+      <div style:"float:right">
+        <% if @stack == @project.stacks.last %>
+          last stack
+        <% else %>
+          <%= link_to 'see versions', stack_path(@stack) %>
+        <% end %>
+      </div>
+    <% end %>
+
+  </div>
+
+
+
+   
+
+</div>
+
+
