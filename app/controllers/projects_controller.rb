@@ -3,10 +3,14 @@ class ProjectsController < ApplicationController
 
   def create
     @project = current_user.projects.build(params[:project])
+
     if @project.save
       @stack = @project.stacks.create
       @card = @stack.cards.create
-      
+
+      @plot = @project.plots.create
+      @plot.pick = true
+      @plot.save
 
       #flash[:success] = "new writing project started!"
       redirect_to edit_stack_path(@stack)

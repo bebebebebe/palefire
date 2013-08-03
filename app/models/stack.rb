@@ -3,11 +3,11 @@ class Stack < ActiveRecord::Base
 
   belongs_to :project
   has_many :cards, dependent: :destroy
+  has_many :arrangements
 
   def multi?
     cards.size > 2
   end
-
 
   def next
     project.stacks.where("id > ?", id).order("id ASC").first

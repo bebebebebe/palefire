@@ -1,4 +1,6 @@
 Palefire::Application.routes.draw do
+  get "arrangements/create"
+
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
 

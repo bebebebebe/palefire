@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130731142031) do
+ActiveRecord::Schema.define(:version => 20130801165158) do
+
+  create_table "arrangements", :force => true do |t|
+    t.integer  "plot_id"
+    t.integer  "stack_id"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "cards", :force => true do |t|
     t.text     "writing"

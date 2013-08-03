@@ -13,6 +13,7 @@ describe Project do
   it { should respond_to(:user_id) }
   it { should respond_to(:user) }
   its(:user) { should == user }
+  it { should respond_to(:plots) }
 
   it { should be_valid }
 
@@ -30,4 +31,36 @@ describe Project do
 
   end
 
+  describe "plot associations" do
+
+    before do 
+      @project.save
+      @project.plots.create
+    end
+
+    it "should destroy associated plots" do
+      plots = @project.plots.to_a
+      @project.destroy
+      expect(plots).not_to be_empty
+      plots.each do |plot|
+        expect(Plot.where(id: plot.id)).to be_empty
+      end 
+    end
+  end
+
 end
+
+
+# let(:project) { FactoryGirl.create(:project) }
+
+
+# it "should destroy associated microposts" do
+#       microposts = @user.microposts.to_a
+#       @user.destroy
+#       expect(microposts).not_to be_empty
+#       microposts.each do |micropost|
+#         expect(Micropost.where(id: micropost.id)).to be_empty
+#       end
+#     end
+
+

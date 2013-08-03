@@ -5,6 +5,7 @@ class Project < ActiveRecord::Base
 
   belongs_to :user
   has_many :stacks
+  has_many :plots, dependent: :destroy
 
   has_many :cards, through: :stacks,  dependent: :destroy
 
