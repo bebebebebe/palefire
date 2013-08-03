@@ -8,6 +8,10 @@ class ProjectsController < ApplicationController
       @stack = @project.stacks.create
       @card = @stack.cards.create
 
+      arrangement = @stack.arrangements.build
+      arrangement.position = 1
+      arrangement.save
+
       @plot = @project.plots.create
       @plot.pick = true
       @plot.save
