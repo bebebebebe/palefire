@@ -8,9 +8,9 @@ class StacksController < ApplicationController
     arrangement = @stack.arrangements.first
     position = arrangement.position
 
-    @arrangement = @stack.arrangements.build
-    @arrangement.position = position + 1
-    @arrangement.save
+    #@arrangement = @stack.arrangements.build
+    #@arrangement.position = position + 1
+    #@arrangement.save
   end
 
   def create
