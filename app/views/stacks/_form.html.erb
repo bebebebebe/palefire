@@ -1,4 +1,5 @@
-<%= form_for [@project, @new_stack] do |f| %>
+<%= form_for [@project, @new_stack] do |f| %> 
+  <%= hidden_field_tag :stack_position, @stack.position %>
 
   <%= f.submit "continue to new stack >>" %>
 

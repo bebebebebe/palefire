@@ -1,20 +1,23 @@
 class Stack < ActiveRecord::Base
-  attr_accessible :project_id
+  attr_accessible :project_id, :position
 
   belongs_to :project
   has_many :cards, dependent: :destroy
 
+  default_scope order: 'stacks.position ASC'
+
   def multi?
     cards.size > 2
   end
-
 
   def next
     project.stacks.where("id > ?", id).order("id ASC").first
   end
 
   def prev
-    project.stacks.where("id < ?", id).order("id DESC").first
+    array = project.stacks.select {|stack| stack.position = self.position - 1}
+    array.first
+    #project.stacks.where("id < ?", id).order("id DESC").first
   end
 
   def format_top_card

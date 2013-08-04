@@ -4,6 +4,10 @@
 <h1><%= link_to @project.title, project_path(@project) %></h1>
 
 <p>number of stacks in project: <%= @project.stacks.count %></p>
+<p>
+  test: 
+  <%#= @s %>
+</p>
 
 <div>
   <% if @stack.next %>
@@ -12,7 +16,7 @@
                                               style: "float: right" %>
   <% else %>
       <div style="float:right; margin-top: -50px;">
-        <%= render 'form' %>
+        <%= render 'form', stack: @stack %>
       </div>
   <% end %>
 
