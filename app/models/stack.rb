@@ -11,11 +11,13 @@ class Stack < ActiveRecord::Base
   end
 
   def next
-    project.stacks.where("id > ?", id).order("id ASC").first
+    #project.stacks.where("id > ?", id).order("id ASC").first
+    array = project.stacks.select{|s| s.position == position + 1}
+    array.first
   end
 
   def prev
-    array = project.stacks.select {|stack| stack.position = self.position - 1}
+    array = project.stacks.select {|stack| stack.position == position - 1}
     array.first
     #project.stacks.where("id < ?", id).order("id DESC").first
   end
