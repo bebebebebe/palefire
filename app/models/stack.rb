@@ -23,10 +23,12 @@ class Stack < ActiveRecord::Base
   end
 
   def inc_following
-    stacks = project.stacks.where("position > ?", position)
+    stacks = project.stacks.where("position >= ?", position)
     stacks.each do |stack|
-      stack.position += 1
-      stack.save
+      if stack != self
+        stack.position += 1
+        stack.save
+      end
     end
   end
 
