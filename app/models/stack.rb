@@ -22,6 +22,14 @@ class Stack < ActiveRecord::Base
     #array.first
   end
 
+  def inc_following
+    stacks = project.stacks.where("position > ?", position)
+    stacks.each do |stack|
+      stack.position += 1
+      stack.save
+    end
+  end
+
   def format_top_card
     text = cards.first.writing
     if text && text != ''
@@ -29,6 +37,5 @@ class Stack < ActiveRecord::Base
       text += '&nbsp'
     end
   end
-
 
 end

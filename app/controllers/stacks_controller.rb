@@ -1,28 +1,11 @@
 class StacksController < ApplicationController
 
-
-  #def new
-  #  @project = Project.find(params[:id])
-       
-    # current_stack = Stack.find(params[:stack_id])
-    # current_position = current_stack.position
-    # position = current_position + 1
-
-   # @stack = @project.stacks.build
-    
-  #end
-
   def create
     #render text: params
 
     @project = Project.find(params[:project_id])
     @stack = @project.stacks.create(params[:stack])
-
     @stack.position = params[:stack_position].to_i + 1
-
-    # @stack.set_postion(@stack.prev().position)
-    #position = @stack.prev.position + 1
-    #@stack.position = position
     @stack.save
 
     @card = @stack.cards.create
@@ -44,7 +27,6 @@ class StacksController < ApplicationController
     @card = @stack.cards.first
 
     @new_stack = Stack.new
-
   end
 
   def destroy
