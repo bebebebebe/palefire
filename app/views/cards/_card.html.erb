@@ -1,9 +1,12 @@
+<% stack = Stack.find(card.stack_id) %>
+<% project = Project.find(stack.project_id) %>
+
 <li>
-  <div> <%# class= 'card writing version <%='pick' if card.pick %>
+  <div class='version <%= 'pick' if stack.pick.card_id == card.id %>'> 
+
+  <%# class= 'card writing version <%='pick' if card.pick %>
     
     <%= card.writing %>
-    <% stack = Stack.find(card.stack_id) %>
-    <% project = Project.find(stack.project_id) %>
 
     <%= link_to 'revise', edit_project_stack_path(id: card.stack_id, project_id: project.id) %> |
     <%= link_to 'destroy version', card, method: :delete, data: { confirm: 'Are you sure?' } %>
