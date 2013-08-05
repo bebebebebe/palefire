@@ -22,8 +22,6 @@ class StacksController < ApplicationController
     @project = Project.find(@stack.project_id)
     @blank_card = @stack.cards.last
     @cards = @stack.cards[0...@stack.cards.length-1]
-
-    @top_card = params[:card]
   end
 
   def edit
