@@ -3,12 +3,6 @@
 
 <h1><%= link_to @project.title, project_path(@project) %></h1>
 
-<p>number of stacks in project: <%= @project.stacks.count %></p>
-<p>
-  test: 
-  <%#= @s %>
-</p>
-
 <div>
   <% if @stack.next %>
     <%= link_to '>>', edit_project_stack_path(id: @stack.next.id,
@@ -52,9 +46,6 @@
 
   </div>
 
-
-
-   
 
 </div>
 

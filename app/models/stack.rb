@@ -11,15 +11,15 @@ class Stack < ActiveRecord::Base
   end
 
   def next
-    #project.stacks.where("id > ?", id).order("id ASC").first
-    array = project.stacks.select{|s| s.position == position + 1}
-    array.first
+    project.stacks.where("position > ?", position).first
+    #array = project.stacks.select{|s| s.position == position + 1}
+    #array.first
   end
 
   def prev
-    array = project.stacks.select {|stack| stack.position == position - 1}
-    array.first
-    #project.stacks.where("id < ?", id).order("id DESC").first
+    project.stacks.where("position < ?", position).last
+    #array = project.stacks.select {|stack| stack.position == position - 1}
+    #array.first
   end
 
   def format_top_card
