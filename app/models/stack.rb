@@ -12,14 +12,10 @@ class Stack < ActiveRecord::Base
 
   def next
     project.stacks.where("position > ?", position).first
-    #array = project.stacks.select{|s| s.position == position + 1}
-    #array.first
   end
 
   def prev
     project.stacks.where("position < ?", position).last
-    #array = project.stacks.select {|stack| stack.position == position - 1}
-    #array.first
   end
 
   def inc_following
