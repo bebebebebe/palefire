@@ -5,11 +5,9 @@ class StacksController < ApplicationController
     @stack = @project.stacks.create(params[:stack])
     @stack.position = params[:stack_position].to_i + 1
     @stack.save
-
     @stack.inc_following
 
     @card = @stack.cards.create
-    
     pick = @stack.build_pick
     pick.card_id = @card.id
     pick.save

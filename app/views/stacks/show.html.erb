@@ -2,13 +2,6 @@
 
 <h1><%= link_to @project.title, project_path(@project) %></h1>
 
-<% if @top_card %>
-  <p>selected card: 
-  <%= @top_card.writing %>
-  </p><br/>
-<% end %>
-
-
 <div>  
   <h3>versions:</h3>
   <ol class="listing">
