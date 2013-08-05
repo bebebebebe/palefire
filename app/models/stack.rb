@@ -3,6 +3,7 @@ class Stack < ActiveRecord::Base
 
   belongs_to :project
   has_many :cards, dependent: :destroy
+  has_one :pick
 
   default_scope order: 'stacks.position ASC'
 

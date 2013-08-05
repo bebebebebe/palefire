@@ -17,6 +17,11 @@ class CardsController < ApplicationController
     @next_card = Card.new(params[:card])
     @next_card.stack_id = @card.stack_id
     @next_card.save
+
+
+    pick = Pick.find_by_stack_id(@stack.id)
+    pick.card_id = @next_card.id
+    pick.save
     
     redirect_to edit_card_path(@next_card)
   end

@@ -1,8 +1,6 @@
 class Project < ActiveRecord::Base
   attr_accessible :title, :description_short, :description_long
 
-  validates :user_id, presence: true
-
   belongs_to :user
   has_many :stacks
 
