@@ -8,16 +8,7 @@ class ProjectsController < ApplicationController
       @stack.position = 1
       @stack.save
       @card = @stack.cards.create
-      
-      # position = Position.new
-      # position.ord = 1
-      # position.save
-      # @stack.position = position
-
-#      redirect_to edit_stack_path(@stack)
-
       redirect_to edit_project_stack_path(id: @stack.id, project_id: @stack.project_id)
-
     else
       render 'static_pages/home'
     end

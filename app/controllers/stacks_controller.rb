@@ -8,6 +8,8 @@ class StacksController < ApplicationController
     @stack.position = params[:stack_position].to_i + 1
     @stack.save
 
+    @stack.inc_following
+
     @card = @stack.cards.create
     redirect_to edit_project_stack_path(id: @stack.id, project_id: @stack.project_id)
   end                                              

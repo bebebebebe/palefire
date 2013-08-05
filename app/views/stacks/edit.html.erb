@@ -8,11 +8,11 @@
     <%= link_to '>>', edit_project_stack_path(id: @stack.next.id,
                                               project_id: @project.id), 
                                               style: "float: right" %>
-  <% else %>
+  <% end %>
       <div style="float:right; margin-top: -50px;">
         <%= render 'form', stack: @stack %>
       </div>
-  <% end %>
+  
 
   <% if @stack.prev %>
     <%=  link_to '<<', edit_project_stack_path(id: @stack.prev.id,
