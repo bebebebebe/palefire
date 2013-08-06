@@ -2,9 +2,7 @@
 <% project = Project.find(stack.project_id) %>
 
 <li>
-  <div class='version <%= 'pick' if stack.pick.card_id == card.id %>'> 
-
-  <%# class= 'card writing version <%='pick' if card.pick %>
+  <div class='version <%= 'pick' if stack.pick.card_id == card.id %>'>
     
     <%= card.writing %>
 
