@@ -9,6 +9,8 @@ Palefire::Application.routes.draw do
   resources :stacks
   resources :cards
 
+  get 'stacks/pick_me'
+  post 'stacks/pick_me'
 
   match '/try', to: 'users#new'
   match '/signin', to: 'sessions#new'

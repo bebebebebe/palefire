@@ -37,4 +37,8 @@ class StacksController < ApplicationController
     redirect_to project_path(project)
   end
 
+  def pick_me
+    render text: params
+  end
+
 end

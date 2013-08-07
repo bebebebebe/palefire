@@ -3,7 +3,12 @@
 
 <li>
   <div class='version <%= 'pick' if stack.pick.card_id == card.id %>'>
-    
+
+    <% unless stack.pick.card_id == card.id %>
+      <%#= button_to "select", :action => "pick_me", remote: true %>
+      <%= link_to 'select', :action => 'pick_me' %>
+    <% end %>
+
     <%= card.writing %>
 
     <%= link_to 'revise', edit_project_stack_path(id: card.stack_id, project_id: project.id) %> |

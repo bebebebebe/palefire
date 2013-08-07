@@ -13,9 +13,9 @@ $(document).ready(function(){
     $(this).css("background","");
   });
 
-  //$(".version").click(function(){
+  // $(".version").click(function(){
   //  $(this).css("background", "gray")
-  //});
+  // });
 
 
 });
