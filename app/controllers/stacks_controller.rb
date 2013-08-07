@@ -20,6 +20,7 @@ class StacksController < ApplicationController
     @project = Project.find(@stack.project_id)
     @blank_card = @stack.cards.last
     @cards = @stack.cards[0...@stack.cards.length-1]
+    @pick = @stack.pick
   end
 
   def edit
@@ -37,8 +38,12 @@ class StacksController < ApplicationController
     redirect_to project_path(project)
   end
 
-  def pick_me
-    render text: params
+  def update
+    @stack = Stack.find(params[:id])
+    pick = Pick.find_by_stack_id(@stack.id)
+    pick.card_id = params[:pick_me]
+    pick.save
+    redirect_to stack_path(@stack)
   end
 
 end
