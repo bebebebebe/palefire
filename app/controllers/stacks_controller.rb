@@ -26,7 +26,7 @@ class StacksController < ApplicationController
   def edit
     @stack = Stack.find(params[:id])
     @project = Project.find(@stack.project_id)
-    @card = @stack.cards.first
+    @card = Card.find(@stack.pick.card_id)
 
     @new_stack = Stack.new
   end

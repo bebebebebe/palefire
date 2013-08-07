@@ -36,14 +36,9 @@
 
    <% if @stack.multi? %>
       <div style:"float:right">
-        <% if @stack == @project.stacks.last %>
-          last stack
-        <% else %>
-          <%= link_to 'see versions', stack_path(@stack) %>
-        <% end %>
+        <%= link_to 'see versions', stack_path(@stack) %>
       </div>
     <% end %>
-
   </div>
 
 
