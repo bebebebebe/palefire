@@ -11,3 +11,7 @@ $(document).ready ->
   ).bind "ajax:error", (e, xhr, status, error) ->
     $("#update_msg").append('<div class="msg">Error: not saved</div>')
     $(".msg").delay(2000).fadeOut("slow");
+
+
+ 
+
