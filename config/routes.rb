@@ -6,11 +6,11 @@ Palefire::Application.routes.draw do
     resources :stacks
   end
 
-  resources :stacks
+   resources :stacks do
+     resources :picks, only: [:edit]
+   end
+  
   resources :cards
-
-  get 'stacks/pick_me'
-  post 'stacks/pick_me'
 
   match '/try', to: 'users#new'
   match '/signin', to: 'sessions#new'
@@ -21,9 +21,6 @@ Palefire::Application.routes.draw do
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
-
-
-
 
 
 
