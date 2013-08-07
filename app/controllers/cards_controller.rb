@@ -18,7 +18,6 @@ class CardsController < ApplicationController
     @next_card.stack_id = @card.stack_id
     @next_card.save
 
-
     pick = Pick.find_by_stack_id(@stack.id)
     pick.card_id = @next_card.id
     pick.save
@@ -26,14 +25,11 @@ class CardsController < ApplicationController
     redirect_to edit_card_path(@next_card)
   end
 
-
   def destroy
     @card = Card.find(params[:id])
     @card.destroy
     stack = Stack.find(@card.stack_id)
     redirect_to stack_path(stack)
   end
-
   
-
 end
