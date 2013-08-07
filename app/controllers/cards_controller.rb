@@ -34,4 +34,6 @@ class CardsController < ApplicationController
     redirect_to stack_path(stack)
   end
 
+  
+
 end

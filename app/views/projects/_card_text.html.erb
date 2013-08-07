@@ -4,8 +4,7 @@
 
   <%= link_to content_tag(:span), edit_project_stack_path(id: card_text.id,
                                                         project_id: @project.id) %>  
-
-  <%= simple_format(card_text.format_top_card, class: 'paragraphs') %>
+  <%= simple_format(card_text.format_picked_card, class: 'paragraphs') %>
 </div>
 
 

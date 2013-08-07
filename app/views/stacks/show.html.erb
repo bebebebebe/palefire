@@ -2,14 +2,6 @@
 
 <h1><%= link_to @project.title, project_path(@project) %></h1>
 
-<% if @top_card %>
-  <p>selected card: 
-  <%= @top_card.writing %>
-  </p><br/>
-<% end %>
-
-
-<%#<div class="span8"> %>
 <div>  
   <h3>versions:</h3>
   <ol class="listing">
@@ -18,8 +10,3 @@
 </div>
 
 <div>
-  
-  <%#= link_to 'add blank card to stack', edit_card_path(@blank_card) %>
-
-
-

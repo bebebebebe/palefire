@@ -410,16 +410,15 @@ aside {
   color: firebrick;
 }
 
-
-
 .paragraphs {
   clear: both;
 }
 
 .pick {
-  background: white;
-  border-style: solid firebrick 2px;
+  background: $palered;
+//  border: solid 2px firebrick;
 }
 
-
-
+.version {
+  padding: 20px;
+}

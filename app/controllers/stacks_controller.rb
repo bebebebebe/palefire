@@ -5,11 +5,9 @@ class StacksController < ApplicationController
     @stack = @project.stacks.create(params[:stack])
     @stack.position = params[:stack_position].to_i + 1
     @stack.save
-
     @stack.inc_following
 
     @card = @stack.cards.create
-    
     pick = @stack.build_pick
     pick.card_id = @card.id
     pick.save
@@ -22,8 +20,6 @@ class StacksController < ApplicationController
     @project = Project.find(@stack.project_id)
     @blank_card = @stack.cards.last
     @cards = @stack.cards[0...@stack.cards.length-1]
-
-    @top_card = params[:card]
   end
 
   def edit
@@ -39,6 +35,10 @@ class StacksController < ApplicationController
     project = Project.find(@stack.project_id)
     @stack.destroy
     redirect_to project_path(project)
+  end
+
+  def pick_me
+    render text: params
   end
 
 end
