@@ -211,6 +211,7 @@ h2 {
 }
 
 .version {
+  padding: 20px;
   position: relative
   span {
   padding-top: 30px;
@@ -227,8 +228,6 @@ h2 {
   font-size: 28px;
   @include mini_card;
 }
-
-
 
 .project-info {
   float: right;
@@ -292,9 +291,6 @@ top:0px;
 left:0px;
 
  }
-
-
-
 
 
 /* sidebar */
@@ -376,7 +372,7 @@ input[type=password], input[type=password]:focus {
 
   li {
     padding: 30px 0;
-    border-top: 1px solid indianred;
+    border-top: 1px solid gray;
         }
 }
 
@@ -418,10 +414,7 @@ aside {
 }
 
 .pick {
-  background: $palered;
-//  border: solid 2px firebrick;
+  //background: $palered;
+  border: solid 2px firebrick;
 }
 
-.version {
-  padding: 20px;
-}

@@ -11,11 +11,11 @@
     </div>
 
     <div class="timestamp">
-      (stacks: <%= project.num_stacks %>) </br>
+      (<%= pluralize(project.num_stacks, 'stack') %>) </br>
       
       started <%= time_ago_in_words(project.created_at) %> ago |
       
-      last updated <%#= time_ago_in_words(project.cards.first.updated_at) %> ago </br>
+      last updated <%= time_ago_in_words(project.cards.first.updated_at) %> ago </br>
     </div>
 
   </div>

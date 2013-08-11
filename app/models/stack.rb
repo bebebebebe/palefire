@@ -33,9 +33,13 @@ class Stack < ActiveRecord::Base
     card = Card.find(pick.card_id)
     text = card.writing
     if text && text != ''
-      text.gsub('/n', '<p></p>')
+      text.gsub("\n", '<p></p>')
       text += '&nbsp'
     end
+  end
+
+  def picked?(card)
+    pick.card_id == card.id
   end
 
 end

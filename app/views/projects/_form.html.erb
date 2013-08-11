@@ -1,6 +1,6 @@
 <%= form_for @project do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-  <div> <%#class="new-project card"> %>
+  <div>
     <%= f.text_field :title, placeholder: "new project title..." %>
   </div>
   <%= f.submit 'start new project' %>
