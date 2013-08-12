@@ -10,12 +10,28 @@ $(document).ready(function(){
   $(".keep-btn").hover(function(){
     $(this).css("background", "#BFBABA");
   }, function(){
-    $(this).css("background","");
+    $(this).css("background",""); 
   });
 
-  // $(".version").click(function(){
-  //  $(this).css("background", "gray")
-  // });
+  $(".keep-btn").on("click", function(){
+    var url = $('form.edit_card').attr('action');
+    var auth_token = $('form.edit_card div').children().first().next().next().attr('value');
+    var writing = $('form.edit_card textarea').val();
+    $.ajax(url, {
+      type: 'POST',
+      data: {
+        '_method': 'PUT',
+        'authenticity_token': auth_token,
+        'card': {
+          'writing': writing
+        }
+      },
+      success: function(e, data, status, xhr){ $('.edit_card').trigger("versionSave");}
+    })
+
+  })
+
+  $(".")
 
 
 });

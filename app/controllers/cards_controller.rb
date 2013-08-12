@@ -1,10 +1,17 @@
 class CardsController < ApplicationController
 
+  def show
+    @card = Card.find(params[:id])
+
+    respond_to do |fmt|
+     fmt.html {} #someday, make this a 404
+     fmt.json { render json: @card }
+    end
+  end
+
   def edit
     @card = Card.find(params[:id])
     @stack = Stack.find(@card.stack_id)
-    @project = Project.find(@stack.project_id)
-    @new_stack = Stack.new
 
     redirect_to edit_stack_path(@stack)
   end

@@ -3,7 +3,7 @@
 
 <li>
     <% unless stack.picked?(card) %>
-      <%= form_for(stack) do |f| %>
+      <%= form_for(stack, remote: false) do |f| %>
         <%= hidden_field_tag :pick_me, card.id %>
         <%= f.submit 'select' %>
       <% end %>
