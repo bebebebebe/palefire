@@ -42,7 +42,7 @@ class Stack < ActiveRecord::Base
     pick.card_id == card.id
   end
 
-  def picked
+  def picked_card
     Card.find(pick.card_id)
   end
 
