@@ -1,5 +1,9 @@
 == Pale Fire
 
-[In Progress]
+[in progress]
 
-Tool for writing, revising and rearranging small pieces of text.
+App for versioned modular writing, modeling stacks of index cards.  
+
+When composing text on an "card", you can click a “keep version” button, and continue revising and adding to what you’ve written. All the versions you keep are stored in a “stack” of cards, with your last version on top. The texts from the top card of each stack are concatenated into a whole text document. 
+
+You can compare the versions in each stack (in a view displaying word based diffs), and change your mind about which version to select as the top card. Supports some markdown.
