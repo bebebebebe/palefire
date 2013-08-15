@@ -26,12 +26,12 @@ $(document).ready(function(){
           'writing': writing
         }
       },
-      success: function(e, data, status, xhr){ $('.edit_card').trigger("versionSave");}
+      success: function(e, data, status, xhr){ $('.edit_card').trigger("save-confirm").trigger("version-info");}
     })
 
   })
 
-  $(".")
+
 
 
 });

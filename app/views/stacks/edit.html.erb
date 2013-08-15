@@ -34,12 +34,12 @@
 
    <%= render partial: 'cards/form', object: @card %>
 
+<span id="see_versions" ></span>
    <% if @stack.multi? %>
-      <div style:"float:right">
+   <div>
         <%= link_to 'see versions', stack_path(@stack) %>
-      </div>
     <% end %>
-  </div>
+</div>
 
 
 </div>
