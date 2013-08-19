@@ -47,3 +47,5 @@ class Stack < ActiveRecord::Base
   end
 
 end
+
+

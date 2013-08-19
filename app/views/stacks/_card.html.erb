@@ -11,7 +11,7 @@
     <% end %>
 
     <div class='version <%= 'pick' if stack.pick.card_id == card.id %>'>
-      <%= simple_format(card.writing) %>
+      <%= simple_format(card.diff_from_pick, {}, :sanitize => false) %>
     </div>
 
     <% if stack.picked?(card) %>

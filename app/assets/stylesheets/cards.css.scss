@@ -2,3 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.deleted-text {
+  color: lighten(#737373, 30%);
+}
+
+.added-text {
+  color: #33B095;
+}
