@@ -12,8 +12,8 @@ $(document).ready(function(){
     $(".msg").delay(2000).fadeOut("slow");
   })  
 
-  $(".edit_card").on("version-info", function(){
-   $('#see_versions').append('hi');
-  })
+  // $(".edit_card").on("version-info", function(){
+  //  $('#see_versions').append('hi');
+  // })
 
 });
