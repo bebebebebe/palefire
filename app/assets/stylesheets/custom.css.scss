@@ -104,9 +104,25 @@ h2 {
 
 /* header */
 
-.nav pull-right {
-  color: black;
+
+
+.navbar {
+  .navbar-inner {
+    background-color: rgba(255,255,255,0.5);
+    background-image: none;
+    filter: none;
+    box-shadow: none;
+    border-bottom: solid 1px $grayLighter;
+  }
 }
+
+
+.navbar .nav > li > a:hover {
+  color: black;
+  text-decoration: none;
+  background-color: transparent;
+}
+
 
 #logo {
   float: left;
@@ -194,6 +210,7 @@ h2 {
   padding: 5px;
   @include tiny_card;
   position: relative;
+  font-family: monospace;
   project-title {
   color: black;
   font-size: 16px;
@@ -229,8 +246,12 @@ h2 {
   @include mini_card;
 }
 
-.project-info {
-  float: right;
+.project-link {
+  font-size: 10px;
+  position: absolute;
+  bottom: 0px;
+  right: 5px;
+  z-index: 100;
 }
 
 
@@ -260,8 +281,13 @@ h2 {
   font-size: 14px;
 
   overflow: auto;
-
+  
 }
+
+.draft {
+
+  }
+
 
 
 .whole-text-title {
@@ -278,11 +304,13 @@ h2 {
     
     }
 
-.card_text {
+.card-text {
  position: relative;
+
+ word-wrap: break-word;
 }
 
- .card_text span {
+ .card-text span {
 width:100%;
 height:100%;
 position:absolute;
@@ -292,13 +320,21 @@ left:0px;
 
  }
 
+.handle {
+  font-size: 12px;
+  color: #777;
+  cursor: move;
+  z-index: 3;
+  
+}
+
 
 /* sidebar */
 
 aside {
   section {
     padding: 10px 0;
-    border-top: 1px solid $grayLighter;
+    //border-top: 1px solid $grayLighter;
     &:first-child {
       border: 0;
       padding-top: 0;
@@ -321,11 +357,9 @@ aside {
 
 /* miscellaneous */
 .debug_dump {
-  clear: both;
-  float: right;
   width: 100%;
-  margin-top: 45px;
-  @include box_sizing;
+  
+  bottom: 0;
 }
 
 /* forms */
@@ -375,7 +409,7 @@ input[type=password], input[type=password]:focus {
 
   li {
     padding: 30px 0;
-    border-top: 1px solid gray;
+    
         }
 }
 
@@ -383,10 +417,12 @@ input[type=password], input[type=password]:focus {
   display: block;
   color: black;
   font-size: 20px;
+  text-align: center;
 }
 
-.timestamp {
+.project-info {
   color: $grayLight;
+  text-align: center;
 }
 
 .gravatar {
@@ -412,12 +448,15 @@ aside {
   color: firebrick;
 }
 
+/* whole text view */
+
 .paragraphs {
   clear: both;
 }
 
 .pick {
   border: solid 2px #5EA6D6;
-//  border: solid 2px firebrick;
 }
+
+
 

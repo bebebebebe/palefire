@@ -46,4 +46,11 @@ class StacksController < ApplicationController
     redirect_to stack_path(@stack)
   end
 
+  def sort
+    params[:stack].each_with_index do |id, index|
+      Stack.update_all({position: index+1}, {id: id} )
+    end
+    render nothing: true
+  end
+
 end

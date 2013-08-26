@@ -1,7 +1,7 @@
 
 <p>click on any part of the text to switch to card/editing view:</p>
 
-<div class="whole-text">
+<div class="whole-text"> 
 
   <div class="whole-text-title"><%= @project.title %></div>
 
@@ -9,6 +9,14 @@
     <%= @project.description_short %>
   </div><br/>
 
-  <%= render partial: 'card_text', collection: @project.stacks %>
 
+  <ul id="texts" data-update-url="<%= sort_stacks_url %>">
+    <%= render partial: 'card_text', collection: @project.stacks %>
+  </ul>
 </div>
+
+Draft:
+
+
+<%= render 'draft' %>
+

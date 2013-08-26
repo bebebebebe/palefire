@@ -1,15 +1,19 @@
 
-<div class="card_text", style="float: left; word-wrap: break-word;">
+<%= content_tag_for(:li, card_text, class: "card-text") do %>
+
+<p class="handle">[move]</p>
 
   <%= link_to content_tag(:span), edit_project_stack_path(id: card_text.id,
-                                                        project_id: @project.id) %>  
-  <%= simple_format(card_text.format_picked_card, class: 'paragraphs') %>
-</div>
+                                                        project_id: @project.id) %>
+
+  <%= simple_format(card_text.format_picked_card) %>
+<% end %>
 
 
 
-
-
+ <div>
+    <%= link_to 'delete stack', card_text,  method: :delete, data: { confirm: 'This will destroy all cards in the stack.' } %>
+  </div>
 
 
 

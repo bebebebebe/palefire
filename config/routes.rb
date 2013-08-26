@@ -6,7 +6,9 @@ Palefire::Application.routes.draw do
     resources :stacks
   end
 
-  resources :stacks
+  resources :stacks do
+      collection { post :sort }
+    end
   
   resources :cards
 

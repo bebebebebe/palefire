@@ -1,6 +1,8 @@
 <li>
 
-  <div class="card project-card center">
+ 
+
+  <div class="card project-card">
 
     <br><br>
 
@@ -10,19 +12,23 @@
       <%= project.title %>
     </div>
 
-    <div class="timestamp">
-      (<%= pluralize(project.num_stacks, 'stack') %>) </br>
+    <div class="project-info">
       
-      started <%= time_ago_in_words(project.created_at) %> ago |
+      started <%= time_ago_in_words(project.created_at) %> ago </br>
       
-      last updated <%= time_ago_in_words(project.cards.first.updated_at) %> ago </br>
+      last updated <%= time_ago_in_words(project.updated) %> ago </br>
+
+      (<%= pluralize(project.num_stacks, 'stack') %>)
     </div>
 
-  </div>
-
-  <div class="links project-info">
+    <div class="links project-link">
     <%= link_to 'delete project', project,  method: :delete, data: { confirm: 'This will destroy all cards and all stacks in the project.' } %>
   </div>
+
+
+  </div>
+
+   
 
 </li>
 
